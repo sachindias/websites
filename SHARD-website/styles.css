@@ -27,10 +27,48 @@ body {
   font-family: 'DM Sans', sans-serif;
   color: var(--text-colour);
 }
+html {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex; /* or inline-flex */
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  background-color: #0B0B0C;
+  z-index: 1000;  /* Set a higher value here to ensure the header is on top */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+  margin-left: auto;
+  position: relative; /* Required for z-index to work */
+  z-index: 999; /* A high value to bring it to the front */
+}
+header nav .nav-list a {
+  color: var(--white); /* Set default color of the links */
+  text-decoration: none; /* Removes the underline from the links */
+}
+header nav .nav-list a:hover {
+  color: var(--secondary); /* Change color when the link is hovered over */
+}
 
 #main {
   position: relative;
-  min-height: 80vh;
+  min-height: 77vh;
   background: none; 
 }
 
@@ -84,33 +122,6 @@ a {
 }
 section {
   margin: 80px auto;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.nav-list {
-  display: flex;
-  list-style: none;
-  gap: 28px;
-  align-items: center;
-  margin-left: auto;
-  position: relative; /* Required for z-index to work */
-  z-index: 999; /* A high value to bring it to the front */
-}
-nav .nav-list a {
-  color: var(--white); /* Set default color of the links */
-  text-decoration: none; /* Removes the underline from the links */
-}
-
-nav .nav-list a:hover {
-  color: var(--secondary); /* Change color when the link is hovered over */
-}
-
-nav .nav-list a:active {
-  color: var(--line-colour); /* Change color when the link is clicked (active state) */
 }
 .btn {
   padding: 12px 20px;
@@ -362,6 +373,7 @@ nav .nav-list a:active {
   background: red;
   transform: scale(1.05);
 }
+
 .button-content {
   display: flex;
   align-items: center;
