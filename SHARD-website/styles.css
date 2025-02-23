@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-colour: #ffffff;
+  --text-colour2: #ffe600;
+  --secondary : #FFD936;
+  --white : #efefef;
+  --dark-background: #0B0B0C;
+  --line-colour: #3f3f3f;
+  --button-colour: #383838;
+}
+
+/* Favicon (for smaller icon) */
+.favicon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-colour);
+}
+
+#main {
+  position: relative;
+  min-height: 80vh;
+  background: none; 
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Ensures text and image align */
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-image {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.logo-image img {
+  width: 30vw; /* Adjust size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  padding: 16px;
+  margin: auto;
+}
+section {
+  margin: 80px auto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+  margin-left: auto;
+  position: relative; /* Required for z-index to work */
+  z-index: 999; /* A high value to bring it to the front */
+}
+nav .nav-list a {
+  color: var(--white); /* Set default color of the links */
+  text-decoration: none; /* Removes the underline from the links */
+}
+
+nav .nav-list a:hover {
+  color: var(--secondary); /* Change color when the link is hovered over */
+}
+
+nav .nav-list a:active {
+  color: var(--line-colour); /* Change color when the link is clicked (active state) */
+}
+.btn {
+  padding: 12px 20px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn-secondary {
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-weight: bold;
+}
+.btn-primary {
+  border: none;
+  background: var(--secondary);
+  color: var(--text-colour);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  color: var(--white);
+}
+.main-content .intro-heading {
+  font-size: 50px;
+}
+.main-content .main-heading {
+  font-size: 110px;
+  margin-top: -20px;
+}
+.main-content p {
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+  width: 30px;
+}
+
+.section-title h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.section-title .line {
+  width: 270px;
+  height: 4px;
+  border: 10px;
+  background: var(--line-colour);
+  margin: auto;
+}
+
+#about-shard {
+  background: var(--dark-background);
+  margin: 0px;
+  min-height: 110vh;
+}
+
+.section-title {
+  text-align: center; /* Centers everything inside */
+  margin: 50px auto 20px; /* Adds space above and below */
+}
+
+.about-description {
+  text-align: center;
+  max-width: 600px; /* Keeps the paragraph readable */
+  margin: 50px auto 30px; /* Centers it and adds space below */
+  font-size: 18px;
+  color: var(--text-colour);
+}
+
+.about-shard {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.service {
+  width: 350px;
+}
+.service img {
+  width: 100%;  /* Ensures images fill the container width */
+  height: 550px; 
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 30px;
+  transition: transform 0.3s, filter 0.3s;
+  padding: 20px;
+  filter: grayscale(50%);
+}
+.service img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.service h3 {
+  font-size: 20px;
+  margin: 5px auto -40px;
+}
+.service p {
+  font-size: 16px;
+  margin: 50px 0;
+}
+.amos-img {
+  object-position: 40% 0%;
+}
+.sach-img {
+  object-position: 0% 0%;
+}
+.ange-img {
+  object-position: 35% 0%;
+}
+
+
+
+
+
+
+
+
+
+
+#music {
+  background-image: url('./img/mic_scream.jpg');
+  background-position: center center;
+  background-size: cover;
+  margin: 0px;
+  min-height: 110vh;
+  position: relative; /* Required for absolute positioning of h1 */
+}
+#music h1 {
+  font-size: 50px;
+  margin: 50px auto 0px;
+  text-align: center;
+}
+#music .line {
+  width: 100px;
+  height: 4px;
+  border: 30px;
+  background: var(--line-colour);
+  margin: 0px auto 70px;
+}
+#music .placeholder-text h2 {
+  display: flex;
+  font-size: 16vw;
+  justify-content: flex-start; /* Ensures horizontal left alignment */
+  align-items: flex-start;     /* Ensures vertical top alignment */
+  opacity: 0.9;
+  position: absolute; /* Allows for precise control of positioning */
+  left: 1%; /* Aligns the text starting at 1% of the screen width */
+  top: 55%; /* Vertically center the text (you can adjust this value as needed) */
+  transform: translateY(-50%); /* Fine-tunes vertical alignment */
+}
+
+
+
+
+
+
+
+
+
+
+#videos {
+  background-color: var(--dark-background);
+  margin: 0px;
+  min-height: 110vh;
+}
+#videos h1 {
+  font-size: 50px;
+  margin: 50px auto 0px;
+  text-align: center;
+}
+#videos .line {
+  width: 100px;
+  height: 4px;
+  border: 30px;
+  background: var(--line-colour);
+  margin: 0px auto 30px;
+}
+#videos .shard-videos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 0px;
+}
+#videos .indv-video {
+  margin: 15px; /* Optional: adds some space between video containers */
+  text-align: center; /* Optional: centers the video within the container */
+  filter: grayscale(20%);
+}
+#videos .indv-video iframe {
+  width: 500px; /* Adjust the video width */
+  height: 281.25px; /* Adjust the video height */
+  border: none; /* Optional: removes iframe border */
+}
+#videos .indv-video:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(110%);
+}
+#videos .video-wrapper {
+  display: flex;
+  align-items: center; /* Aligns text and icon vertically */
+  justify-content: center; /* Centers the whole content horizontally */
+  gap: 15px; /* Adjust spacing between text and icon */
+  text-align: center;
+  margin-top: 0px; /* Optional spacing */
+}
+#videos .video-text p {
+  font-size: 3vw;
+  max-width: 600px;
+  margin: 20px auto 30px;
+  color: var(--text-colour);
+  text-align: center;
+}
+#videos .social-button {
+  display: inline-flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Align items vertically in the center */
+  gap: 0.3em; /* Space between text and icon */
+  background: var(--button-colour); /* Uses accent color */
+  color: white;
+  text-decoration: none;
+  font-size: 2.7vw;
+  font-weight: bold;
+  padding: 0.15em 0.5em;
+  border-radius: 8px;
+  transition: 0.3s ease, transform 0.2s ease;
+}
+#videos .social-button svg {
+  height: 1em; /* Matches the text size */
+  width: auto; /* Keeps the aspect ratio */
+  fill: white;
+}
+#videos .social-button:hover {
+  background: red;
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+#tour {
+  background-image: url('./img/tour_AnA.jpg');
+  margin: 0px;
+  min-height: 110vh;
+  filter: grayscale(60%);
+}
+#tour h1 {
+  font-size: 50px;
+  margin: 50px auto 0px;
+  text-align: center;
+}
+#tour .line {
+  width: 70px;
+  height: 4px;
+  border: 30px;
+  background: var(--line-colour);
+  margin: 0px auto 70px;
+}
+#tour .tour-text p {
+  font-size: 5vw;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: var(--text-colour2);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+#merch {
+  background-color: var(--dark-background);
+  margin: 0px;
+  min-height: 110vh;
+}
+#merch h1 {
+  font-size: 50px;
+  margin: 50px auto 0px;
+  text-align: center;
+}
+#merch .line {
+  width: 120px;
+  height: 4px;
+  border: 30px;
+  background: var(--line-colour);
+  margin: 0px auto 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#socials {
+  background-color: var(--dark-background);
+  margin: 0px;
+  min-height: 50vh;
+}
+#socials h1 {
+  font-size: 50px;
+  margin: 50px auto 0px;
+  text-align: center;
+}
+#socials .line {
+  width: 120px;
+  height: 4px;
+  border: 30px;
+  background: var(--line-colour);
+  margin: 0px auto 70px;
+}
+#socials .socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#socials .socials-container a {
+  background: var(--button-colour);
+  padding: 1em;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+#socials .socials-container a svg{
+  height: 32px;
+  fill: white;
+}
+#socials .socials-container a::before {
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-colour);
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 250ms cubic-bezier(0.59, 0.03, 0.62, 1.58);
+}
+#socials .socials-container a:hover{
+  background-color: var(--accent-colour);
+  fill: white;
+}
+#socials .socials-container a::after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-colour);
+  transform: translateY(0px) rotate(25deg);
+  opacity: 0;
+  transition: 250ms cubic-bezier(0.59, 0.03, 0.62, 1.58);
+}
+#socials .socials-container a:hover::before {
+  opacity: 1;
+  transform: translateY(-65px) rotate(0);
+}
+#socials .socials-container a:hover::after {
+  opacity: 1;
+  transform: translateY(-43px) rotate(0);
+}
+
+
+
+
+
+
+
+
+footer {
+  margin-top: -60px;
+  background: var(--dark-background);
+}
+footer .line {
+  width: 100vw;
+  height: 4px;
+  border: 3px;
+  background: var(--line-colour);
+  margin: 0px auto 15px;
+}
+footer .frank-music {
+  display: flex; /* Ensures image and text are in a row */
+  align-items: center; /* Centers them vertically */
+  justify-content: center; /* Centers them horizontally */
+  gap: 16px;
+  padding: 20px 2px;
+}
+footer .frank-music .frank-pic {
+  height: 60px; 
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+footer .frank-music p {
+  font-size: 22px;
+  color: var(--white);
+}
+footer .container {
+  display: flex;
+  padding: 20px 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  color: var(--white);
+}
+footer .footer-links a {
+  color: var(--white); /* Set default color of the links */
+  text-decoration: none; /* Removes the underline from the links */
+}
+footer .footer-links a:hover {
+  color: var(--secondary); /* Change color when the link is hovered over */
+}
+footer .footer-links a:active {
+  color: var(--line-colour); /* Change color when the link is clicked (active state) */
+}
+footer .footer-img {
+  width: 40px !important;  /* Force the image width */
+  height: auto !important; /* Force the height adjustment */
+}
+
+
+
+@media screen and (max-width: 520px) {
+  .menu-btn {
+    display: block;
+    z-index: 999; /* A high value to bring it to the front */
+  }
+
+  .logo-image {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .logo-image img {
+    width: 70vw;   /* Adjust size */
+    height: auto;  /* Maintain aspect ratio */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    background: gray;
+    position: absolute;
+    top: 0;
+    right: -900px;
+    width: 80%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: all 0.3s;
+  }
+  .nav-list.active {
+    right: 0;
+  }
+  .nav-list li {
+    text-align: left;
+    width: 100%;
+    padding: 10px 30px;
+    border-bottom: 1px solid var(--white);
+  }
+
+  #about-us .container{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #tour {
+    background-image: url('./img/tour_AnA.jpg');
+    background-position: 25% 0%; /* Adjust the positioning */
+    background-size: cover; /* Ensure the image covers the entire section */
+    margin: 0px;
+    min-height: 110vh;
+    filter: grayscale(60%);
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
